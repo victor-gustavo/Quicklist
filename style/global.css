@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root{
+    /*colors*/
+
+    /*background*/
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFFFFF;
+
+    /*color*/
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    /*content*/
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    /*border*/
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+
+    /*sources*/
+    --ff-family: "IBM Plex Mono", monospace;
+
+    --title: 700 1.5rem/2rem var(--ff-family);
+    --label: 600 1rem/1.25rem var(--ff-family);
+    --paragraph: 500 1rem/1.25rem var(--ff-family);
+    --link: 500 .875rem/1rem var(--ff-family);
+}
