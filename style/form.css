@@ -1,0 +1,39 @@
+& form{
+        margin-block: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        
+        & input{
+            padding: .875rem;
+            border-radius: .5rem;
+            width: 100%;
+        }
+
+        & input[type="text"]{
+            border: 2px solid var(--border-primary);
+
+            &:hover{
+                border: 2px solid var(--border-hover);
+            }
+
+            &:focus{
+                outline: none;
+                border: 2px solid var(--color-brand);
+            }
+        }
+
+        & input[type="submit"]{
+            background-color: var(--color-brand);
+
+            &:hover{
+                background-color: var(--color-brand-hover);
+            }
+        }
+    }
+
+    @media(width >= 80rem){
+        form{
+            display: flex;
+        }
+    }

@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-    
+    <header >
+        <spanclass="flex">
+            <img src="assets/logo.svg" alt="">
+            <img src="assets/quicklist.svg" alt="">
+        </span>
+    </header>
+
+    <main>
+        <tittle>
+            <img src="assets/icons/link button.svg" alt="">
+            <h1>Compras da semana</h1>
+        </tittle>
+
+        <form method="post" enctype="multipart/form-data" class="flex">
+            <input type="text" name="item-name" id="item-name" placeholder="Adicione um novo item">
+            <input type="submit" value="Adicionar item">
+        </form>
+
+        <ul>
+            <li id="item-list">
+                Pao de forma
+                <input type="checkbox" name="completed" id="completed">
+                <input type="button" value="erase">
+            </li>
+        </ul>
+
+        <div id="item-removed">
+            O item foi removido da lista
+            <img src="assets/icons/warning-circle-filled.svg"hjj bvb alt="">
+            <img src="assets/icons/delete-small.svg" alt="">
+        </div>
+    </main>
 </body>
 </html>
