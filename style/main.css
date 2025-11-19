@@ -18,20 +18,58 @@ main{
             padding: 1rem;
             background-color: var(--background-secondary);
             border-radius: .5rem;
-            position: relative;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
 
-            & input[type="checkbox"]{
-                position: absolute;
-                right: calc(100% - 2.5rem);
+            & div{
+                display: flex;
+                gap: .5rem;
+
+                & .check-container{
+                    position: relative;
+                    height: 1rem;
+                    width: 1rem;
+                    border: 1px solid var(--border-primary);
+                    border-radius: .315rem;
+
+                    & input[type="checkbox"]{
+                        position: absolute;
+                        inset: 0;
+                        opacity: 0;
+                    }
+
+                    &:has(:checked){
+                        background: url(../assets/icons/state=selected.svg)center;
+                        border: none;
+                    }
+
+                    &:hover{
+                        border: 1px solid green;
+                    }
+                }
             }
 
-            input[type="button"]{
-                position: absolute;
-                left: calc(100% - 2rem);
+            button{
+                position: relative;
+                height: 1rem;
+                width: 1rem;
+                border: none;
+                display: flex;
+                background-color: inherit;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center;
+
+                &::before{
+                    content: "";
+                    position: absolute;
+                    background: url(../assets/icons/erase.svg)center/contain;
+                    height: 1rem;
+                    width: 1rem;
+                }
             }
-        }
+        }      
     }
+    
 }
