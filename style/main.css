@@ -1,7 +1,6 @@
 main{
     display: grid;
     max-width: 20.375rem;
-    justify-content: center;
     margin: auto;
 
     & tittle{
@@ -20,7 +19,7 @@ main{
             border-radius: .5rem;
             display: flex;
             justify-content: space-between;
-            align-items: center;
+           
 
             & div{
                 display: flex;
@@ -31,16 +30,18 @@ main{
                     height: 1rem;
                     width: 1rem;
                     border: 1px solid var(--border-primary);
-                    border-radius: .315rem;
+                    border-radius: .35rem;
+                    
 
                     & input[type="checkbox"]{
                         position: absolute;
                         inset: 0;
                         opacity: 0;
+                        transition: .5s;
                     }
 
                     &:has(:checked){
-                        background: url(../assets/icons/state=selected.svg)center;
+                        background: url(../assets/icons/state=selected.svg)center/contain;
                         border: none;
                     }
 
@@ -56,20 +57,41 @@ main{
                 width: 1rem;
                 border: none;
                 display: flex;
-                background-color: inherit;
                 cursor: pointer;
-                justify-content: center;
-                align-items: center;
+                left: 2px;
+                background: url(../assets/icons/erase.svg)center/contain;
+                transition: .25s;
 
-                &::before{
-                    content: "";
-                    position: absolute;
-                    background: url(../assets/icons/erase.svg)center/contain;
-                    height: 1rem;
-                    width: 1rem;
+                &:hover{
+                    background: url(../assets/icons/erase-hover.svg) center/contain;
                 }
+     
             }
+            
         }      
     }
     
+    & #item-removed{
+        margin-block: 2rem;
+        display: flex;
+        padding: .75rem;
+        background-color: var(--color-danger);
+        border-radius: .5rem;
+        justify-content: space-between;
+
+
+        & div{
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+
+        }
+    }
+    
+}
+
+@media(width >= 80rem){
+    main{
+        max-width: 39.25rem;
+    }
 }
