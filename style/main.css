@@ -78,6 +78,8 @@ main{
         background-color: var(--color-danger);
         border-radius: .5rem;
         justify-content: space-between;
+        animation: item-removed 2.5s ease-out both;
+        transform: translateY(2rem);
 
 
         & div{
@@ -93,5 +95,21 @@ main{
 @media(width >= 80rem){
     main{
         max-width: 39.25rem;
+    }
+}
+
+@keyframes item-removed{
+    0%{
+        opacity: 0;
+    }
+    
+    66%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 0;
     }
 }
